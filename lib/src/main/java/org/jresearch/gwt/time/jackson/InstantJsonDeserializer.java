@@ -1,5 +1,6 @@
 package org.jresearch.gwt.time.jackson;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 
 import org.dominokit.jackson.JsonDeserializationContext;
@@ -22,6 +23,8 @@ public class InstantJsonDeserializer extends JsonDeserializer<Instant> {
 	/** {@inheritDoc} */
 	@Override
 	public Instant doDeserialize(JsonReader reader, JsonDeserializationContext ctx, JsonDeserializerParameters params) {
-		return Instant.ofEpochMilli(reader.nextLong());
+		BigDecimal seconds = new BigDecimal(reader.nextString());
+		return DecimalUtils.extractSecondsAndNanos(seconds, Instant::ofEpochSecond);
 	}
+
 }

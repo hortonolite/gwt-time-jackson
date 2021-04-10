@@ -22,6 +22,7 @@ public class InstantJsonSerializer extends JsonSerializer<Instant> {
 	/** {@inheritDoc} */
 	@Override
 	public void doSerialize(JsonWriter writer, Instant value, JsonSerializationContext ctx, JsonSerializerParameters params) {
-		writer.value(value.toEpochMilli());
+		writer.value(DecimalUtils.toBigDecimal(value.getEpochSecond(), value.getNano()));
 	}
+
 }
