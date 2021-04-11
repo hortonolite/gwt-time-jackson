@@ -106,13 +106,13 @@ public final class DecimalUtils {
 	 *
 	 * @since 2.9.8
 	 */
-	public static <T> T extractSecondsAndNanos(BigDecimal seconds, BiFunction<Long, Integer, T> convert) {
+	public static <T> T extractSecondsAndNanos(BigDecimal seconds, BiFunction<Long, Long, T> convert) {
 		// Complexity is here to workaround unbounded latency in some BigDecimal
 		// operations.
 		// https://github.com/FasterXML/jackson-databind/issues/2141
 
 		long secondsOnly;
-		int nanosOnly;
+		long nanosOnly;
 
 		BigDecimal nanoseconds = seconds.scaleByPowerOfTen(9);
 		if (nanoseconds.precision() - nanoseconds.scale() <= 0) {
