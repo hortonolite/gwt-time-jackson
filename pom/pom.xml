@@ -24,7 +24,7 @@
 	</modules>
 	<properties>
 		<gwt.version>2.9.0</gwt.version>
-		<domino-jackson.ver>1.0.0-RC3</domino-jackson.ver>
+		<domino-jackson.ver>1.0.0-RC4</domino-jackson.ver>
 	</properties>
 	<dependencyManagement>
 		<dependencies>

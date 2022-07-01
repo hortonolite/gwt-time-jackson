@@ -18,6 +18,10 @@
 			<artifactId>domino-jackson-processor</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.dominokit</groupId>
+			<artifactId>domino-jackson</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.google.auto.service</groupId>
 			<artifactId>auto-service-annotations</artifactId>
 		</dependency>
