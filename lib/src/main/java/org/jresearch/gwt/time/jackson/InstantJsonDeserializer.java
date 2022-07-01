@@ -16,7 +16,7 @@ public class InstantJsonDeserializer extends JsonDeserializer<Instant> {
 		return INSTANCE;
 	}
 
-	// TODO Fix for https://github.com/DominoKit/domino-jackson/issues/51
+// TODO Fix for https://github.com/DominoKit/domino-jackson/issues/51
 //	private InstantJsonDeserializer() {
 //	}
 
