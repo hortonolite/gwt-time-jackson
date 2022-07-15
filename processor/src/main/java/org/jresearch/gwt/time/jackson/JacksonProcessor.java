@@ -2,6 +2,7 @@ package org.jresearch.gwt.time.jackson;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.util.Collections;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -24,7 +25,7 @@ public class JacksonProcessor extends AbstractProcessor {
 
 	@Override
 	public Set<String> getSupportedAnnotationTypes() {
-		return Set.of();
+		return Collections.emptySet();
 	}
 
 	@Override
