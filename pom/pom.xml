@@ -13,9 +13,8 @@
 	<description>JRS GWT time custom Jackson (de)serialization for domino kit, POM</description>
 	<url>https://github.com/foal/gwt-time-jackson</url>
 	<scm>
-		<connection>scm:hg:https://helixteamhub.cloud/JRS/projects/gwtTime/repositories/mercurial/gwt-time-jackson</connection>
-		<developerConnection>scm:hg:ssh://hth@helixteamhub.cloud/JRS/projects/gwtTime/repositories/mercurial/gwt-time-jackson</developerConnection>
-		<url>https://github.com/foal/gwt-time-jackson</url>
+		<developerConnection>scm:git:https://github.com/hortonolite/gwt-time-jackson.git</developerConnection>
+		<url>https://github.com/hortonolite/gwt-time-jackson</url>
 		<tag>HEAD</tag>
 	</scm>
 	<modules>
