@@ -22,7 +22,11 @@ public class LocalDateJsonSerializer extends JsonSerializer<LocalDate> {
 	/** {@inheritDoc} */
 	@Override
 	public void doSerialize(JsonWriter writer, LocalDate value, JsonSerializationContext ctx, JsonSerializerParameters params) {
-		writer.value(value.toEpochDay());
+		writer.beginArray();
+		writer.value(value.getYear());
+		writer.value(value.getMonthValue());
+		writer.value(value.getDayOfMonth());
+		writer.endArray();
 	}
 
 }

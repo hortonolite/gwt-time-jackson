@@ -22,7 +22,12 @@ public class LocalDateJsonDeserializer extends JsonDeserializer<LocalDate> {
 	/** {@inheritDoc} */
 	@Override
 	public LocalDate doDeserialize(JsonReader reader, JsonDeserializationContext ctx, JsonDeserializerParameters params) {
-		return LocalDate.ofEpochDay(reader.nextLong());
+		reader.beginArray();
+		int year = reader.nextInt();
+		int month = reader.nextInt();
+		int day = reader.nextInt();
+		reader.endArray();
+		return LocalDate.of(year, month, day);
 	}
 
 }

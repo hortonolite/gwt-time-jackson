@@ -23,6 +23,11 @@ import dominojackson.shaded.com.squareup.javapoet.ClassName;
 public class JacksonProcessor extends AbstractProcessor {
 
 	@Override
+	public Set<String> getSupportedAnnotationTypes() {
+		return Set.of();
+	}
+
+	@Override
 	public SourceVersion getSupportedSourceVersion() {
 		return SourceVersion.latestSupported();
 	}
