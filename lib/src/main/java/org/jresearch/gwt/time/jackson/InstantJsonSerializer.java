@@ -15,10 +15,6 @@ public class InstantJsonSerializer extends JsonSerializer<Instant> {
 		return INSTANCE;
 	}
 
-//TODO Fix for https://github.com/DominoKit/domino-jackson/issues/51
-//	private InstantJsonSerializer() {
-//	}
-
 	/** {@inheritDoc} */
 	@Override
 	public void doSerialize(JsonWriter writer, Instant value, JsonSerializationContext ctx, JsonSerializerParameters params) {

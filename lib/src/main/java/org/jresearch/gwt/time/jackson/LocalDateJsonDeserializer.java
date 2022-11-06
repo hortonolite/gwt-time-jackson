@@ -15,10 +15,6 @@ public class LocalDateJsonDeserializer extends JsonDeserializer<LocalDate> {
 		return INSTANCE;
 	}
 
-// TODO Fix for https://github.com/DominoKit/domino-jackson/issues/51
-//	private InstantJsonDeserializer() {
-//	}
-
 	/** {@inheritDoc} */
 	@Override
 	public LocalDate doDeserialize(JsonReader reader, JsonDeserializationContext ctx, JsonDeserializerParameters params) {
