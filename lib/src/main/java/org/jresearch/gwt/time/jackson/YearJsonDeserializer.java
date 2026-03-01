@@ -5,8 +5,10 @@ import java.time.Year;
 import org.dominokit.jackson.JsonDeserializationContext;
 import org.dominokit.jackson.JsonDeserializer;
 import org.dominokit.jackson.JsonDeserializerParameters;
+import org.dominokit.jackson.annotation.CustomDeserializer;
 import org.dominokit.jackson.stream.JsonReader;
 
+@CustomDeserializer(Year.class)
 public class YearJsonDeserializer extends JsonDeserializer<Year> {
 
 	private static final YearJsonDeserializer INSTANCE = new YearJsonDeserializer();

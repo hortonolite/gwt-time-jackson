@@ -2,11 +2,14 @@ package org.jresearch.gwt.time.jackson;
 
 import java.math.BigDecimal;
 import java.time.Duration;
+
 import org.dominokit.jackson.JsonSerializationContext;
 import org.dominokit.jackson.JsonSerializer;
 import org.dominokit.jackson.JsonSerializerParameters;
+import org.dominokit.jackson.annotation.CustomSerializer;
 import org.dominokit.jackson.stream.JsonWriter;
 
+@CustomSerializer(Duration.class)
 public class DurationJsonSerializer extends JsonSerializer<Duration> {
 
 	private static final DurationJsonSerializer INSTANCE = new DurationJsonSerializer();

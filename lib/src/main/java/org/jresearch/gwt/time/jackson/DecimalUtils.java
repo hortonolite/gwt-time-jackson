@@ -18,7 +18,6 @@ package org.jresearch.gwt.time.jackson;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.function.BiFunction;
 
 /**
  * Utilities to aid in the translation of decimal types to/from multiple parts.
@@ -27,6 +26,7 @@ import java.util.function.BiFunction;
  * @since 2.2
  */
 public final class DecimalUtils {
+
 	private static final BigDecimal ONE_BILLION = new BigDecimal(1_000_000_000L);
 
 	private DecimalUtils() {
@@ -34,8 +34,8 @@ public final class DecimalUtils {
 
 	public static String toDecimal(long seconds, int nanoseconds) {
 		StringBuilder sb = new StringBuilder(20)
-				.append(seconds)
-				.append('.');
+		    .append(seconds)
+		    .append('.');
 		// 14-Mar-2016, tatu: Although we do not yet (with 2.7) trim trailing zeroes,
 		// for general case,
 		if (nanoseconds == 0L) {
@@ -106,7 +106,7 @@ public final class DecimalUtils {
 	 *
 	 * @since 2.9.8
 	 */
-	public static <T> T extractSecondsAndNanos(BigDecimal seconds, BiFunction<Long, Long, T> convert) {
+	public static <T> T extractSecondsAndNanos(BigDecimal seconds, LongBiFunction<T> convert) {
 		// Complexity is here to workaround unbounded latency in some BigDecimal
 		// operations.
 		// https://github.com/FasterXML/jackson-databind/issues/2141

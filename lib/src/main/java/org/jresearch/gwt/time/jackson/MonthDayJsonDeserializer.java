@@ -1,12 +1,14 @@
 package org.jresearch.gwt.time.jackson;
 
+import java.time.MonthDay;
+
 import org.dominokit.jackson.JsonDeserializationContext;
 import org.dominokit.jackson.JsonDeserializer;
 import org.dominokit.jackson.JsonDeserializerParameters;
+import org.dominokit.jackson.annotation.CustomDeserializer;
 import org.dominokit.jackson.stream.JsonReader;
 
-import java.time.MonthDay;
-
+@CustomDeserializer(MonthDay.class)
 public class MonthDayJsonDeserializer extends JsonDeserializer<MonthDay> {
 
 	private static final MonthDayJsonDeserializer INSTANCE = new MonthDayJsonDeserializer();

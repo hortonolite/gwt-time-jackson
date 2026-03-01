@@ -5,8 +5,10 @@ import java.time.LocalDate;
 import org.dominokit.jackson.JsonSerializationContext;
 import org.dominokit.jackson.JsonSerializer;
 import org.dominokit.jackson.JsonSerializerParameters;
+import org.dominokit.jackson.annotation.CustomSerializer;
 import org.dominokit.jackson.stream.JsonWriter;
 
+@CustomSerializer(LocalDate.class)
 public class LocalDateJsonSerializer extends JsonSerializer<LocalDate> {
 
 	private static final LocalDateJsonSerializer INSTANCE = new LocalDateJsonSerializer();

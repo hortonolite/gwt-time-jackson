@@ -1,12 +1,14 @@
 package org.jresearch.gwt.time.jackson;
 
+import java.time.Year;
+
 import org.dominokit.jackson.JsonSerializationContext;
 import org.dominokit.jackson.JsonSerializer;
 import org.dominokit.jackson.JsonSerializerParameters;
+import org.dominokit.jackson.annotation.CustomSerializer;
 import org.dominokit.jackson.stream.JsonWriter;
 
-import java.time.Year;
-
+@CustomSerializer(Year.class)
 public class YearJsonSerializer extends JsonSerializer<Year> {
 
 	private static final YearJsonSerializer INSTANCE = new YearJsonSerializer();

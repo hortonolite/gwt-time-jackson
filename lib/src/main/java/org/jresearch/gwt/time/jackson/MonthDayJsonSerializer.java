@@ -5,8 +5,10 @@ import java.time.MonthDay;
 import org.dominokit.jackson.JsonSerializationContext;
 import org.dominokit.jackson.JsonSerializer;
 import org.dominokit.jackson.JsonSerializerParameters;
+import org.dominokit.jackson.annotation.CustomSerializer;
 import org.dominokit.jackson.stream.JsonWriter;
 
+@CustomSerializer(MonthDay.class)
 public class MonthDayJsonSerializer extends JsonSerializer<MonthDay> {
 
 	private static final MonthDayJsonSerializer INSTANCE = new MonthDayJsonSerializer();

@@ -5,8 +5,10 @@ import java.time.LocalTime;
 import org.dominokit.jackson.JsonDeserializationContext;
 import org.dominokit.jackson.JsonDeserializer;
 import org.dominokit.jackson.JsonDeserializerParameters;
+import org.dominokit.jackson.annotation.CustomDeserializer;
 import org.dominokit.jackson.stream.JsonReader;
 
+@CustomDeserializer(LocalTime.class)
 public class LocalTimeJsonDeserializer extends JsonDeserializer<LocalTime> {
 
 	private static final LocalTimeJsonDeserializer INSTANCE = new LocalTimeJsonDeserializer();

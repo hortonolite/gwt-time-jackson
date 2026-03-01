@@ -5,8 +5,10 @@ import java.time.Instant;
 import org.dominokit.jackson.JsonSerializationContext;
 import org.dominokit.jackson.JsonSerializer;
 import org.dominokit.jackson.JsonSerializerParameters;
+import org.dominokit.jackson.annotation.CustomSerializer;
 import org.dominokit.jackson.stream.JsonWriter;
 
+@CustomSerializer(Instant.class)
 public class InstantJsonSerializer extends JsonSerializer<Instant> {
 
 	private static final InstantJsonSerializer INSTANCE = new InstantJsonSerializer();
