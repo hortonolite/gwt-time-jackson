@@ -6,10 +6,8 @@ import java.time.Duration;
 import org.dominokit.jackson.JsonDeserializationContext;
 import org.dominokit.jackson.JsonDeserializer;
 import org.dominokit.jackson.JsonDeserializerParameters;
-import org.dominokit.jackson.annotation.CustomDeserializer;
 import org.dominokit.jackson.stream.JsonReader;
 
-@CustomDeserializer(Duration.class)
 public class DurationJsonDeserializer extends JsonDeserializer<Duration> {
 
 	private static final DurationJsonDeserializer INSTANCE = new DurationJsonDeserializer();

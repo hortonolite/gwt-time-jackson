@@ -6,10 +6,8 @@ import java.time.Instant;
 import org.dominokit.jackson.JsonDeserializationContext;
 import org.dominokit.jackson.JsonDeserializer;
 import org.dominokit.jackson.JsonDeserializerParameters;
-import org.dominokit.jackson.annotation.CustomDeserializer;
 import org.dominokit.jackson.stream.JsonReader;
 
-@CustomDeserializer(Instant.class)
 public class InstantJsonDeserializer extends JsonDeserializer<Instant> {
 
 	private static final InstantJsonDeserializer INSTANCE = new InstantJsonDeserializer();
